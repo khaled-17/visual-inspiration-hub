@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* E:/delll/Documents/GitHub/clone/visual-inspiration-hub/src/index.css */
+
+@layer components {
+  .dog {
+    border-width: 3px;
+    border-style: solid;
+    border-color: #e53e3e; /* تغيير لون الحدود حسب الحاجة */
+  }
+}
+
+ 

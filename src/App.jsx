@@ -1,13 +1,36 @@
-import { useState } from 'react'
- 
+  
+import {
+    createBrowserRouter,
+    createRoutesFromElements,
+    Route,
+    RouterProvider,
+  } from "react-router-dom";
+  
+
+  import Modeswitcher from "./Components/Modeswitcher";
+import MainLayout from './Container/MainLayout';
+import Home from './Container/Home';
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Home />}>
+        {/* <Route path="dashboard" element={<Modeswitcher />} /> */}
+       </Route>
+    )
+  );
+
+
+
+
  
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <h1 className="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+
+<MainLayout>
+
+    <RouterProvider router={router} />
+
+</MainLayout>
 
   )
 }
